@@ -5,6 +5,7 @@ mes_usuario = input("Introduce el nombre de un mes: ")
 #pasamos a minúsculas con el método lower()
 
 mes = mes_usuario.lower()
+
 #establecemos primer condicional con los meses de 31 días y, de cumplirs,la salida print
 
 if  (mes == "enero" or mes == "marzo" or mes == "mayo" or mes == "julio" or mes == " agosto" or mes == "Octubre" or mes == "diciembre"):
@@ -12,6 +13,7 @@ if  (mes == "enero" or mes == "marzo" or mes == "mayo" or mes == "julio" or mes 
     print("El mes de", mes_usuario, "tiene 31 días.")
 
 #de no cumplirse arriba, continuamos con febrero y, en su caso, la salida print
+
 elif mes == "febrero":
     print("El mes de", mes_usuario, "tiene 28 días.")
 
@@ -20,6 +22,7 @@ elif mes == "febrero":
 elif (mes == "abril" or mes == "junio" or mes == "septiembre" or mes == "noviembre"):
 
     print("El mes de", mes_usuario, "tiene 30 días.")
+
 #si no se cumplen ninguna de las condiciones anteriores devolvemos la salida de "desconocido"
 
 else:
