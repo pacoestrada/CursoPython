@@ -8,7 +8,7 @@ mes = mes_usuario.lower()
 
 #establecemos primer condicional con los meses de 31 días y, de cumplirs,la salida print
 
-if  (mes == "enero" or mes == "marzo" or mes == "mayo" or mes == "julio" or mes == " agosto" or mes == "Octubre" or mes == "diciembre"):
+if  (mes == "enero" or mes == "marzo" or mes == "mayo" or mes == "julio" or mes == " agosto" or mes == "octubre" or mes == "diciembre"):
 
     print("El mes de", mes_usuario, "tiene 31 días.")
 
