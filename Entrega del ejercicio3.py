@@ -32,7 +32,7 @@ for gasto in gastos:
     cantidad_total += gasto["cantidad"]
 
 # Imprimir cantidad_total
-print(f"Cantidad total : {cantidad_total} euros")
+print("Cantidad total : " + str(cantidad_total) + "euros")
 
 
 
