@@ -1,6 +1,6 @@
 def tipo_triangulo():
     """
-     Función que olicita al usuario que introduzca las longitudes de 3 segmentos y determina si es posible formar un triángulo con los valores introducidos.
+     Función que olicita al usuario que introduzca las longitudes de 3 lados y determina si es posible formar un triángulo con los valores introducidos.
      Si se puede, nos devuelve si es un triángulo equilátero, isósceles o escaleno, o si no es un triángulo.
     """
     a = float(input("Ingrese la longitud del primer lado: "))
