@@ -54,6 +54,6 @@ resultado = tk.Label(frame_resultado, bg="lightblue", font=("Arial", 20))
 resultado.pack()
 
 # Crear botón para calcular
-tk.Button(ventana, text="Calcular", bg="lightblue", font=("Arial", 16), command=tipo_triangulo).pack(pady=20)
+tk.Button(ventana, text="Calcular", bg="lightblue", font=("Arial", 20), command=tipo_triangulo).pack(pady=20)
 
 ventana.mainloop()
