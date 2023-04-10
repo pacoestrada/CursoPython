@@ -38,5 +38,5 @@ def calcula_notas_finales(nombre_fichero):
                 print(nombre, apellidos, round(nota_final, 2), "aprobado")
             else:
                 print(nombre, apellidos, round(nota_final, 2), "suspenso")
-
+#llamamaos a la función sobre el archivo 'notas.csv' que hemos descargado en el ejercicio
 calcula_notas_finales('notas.csv')
