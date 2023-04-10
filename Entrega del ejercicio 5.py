@@ -30,7 +30,7 @@ def calcula_notas_finales(nombre_fichero):
     Lee el fichero con las notas de los alumnos y calcula sus notas finales.
     Imprime una línea por cada alumno con su nota final y si ha aprobado o no la asignatura.
     """
-    with open(nombre_fichero, "r", encoding="utf-8") as fichero:
+    with open(nombre_fichero, encoding="utf-8") as fichero:
         for linea in fichero:
             nombre, apellidos, control1, control2, examen = extrae_datos(linea)
             nota_final = calcula_nota_final(control1, control2, examen)
