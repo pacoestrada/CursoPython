@@ -1,37 +1,42 @@
-import csv
-
-def calcula_notas_finales(nombre_archivo):
+def calcula_nota_final(control1, control2, examen):
     """
-    Calcula las notas finales de un conjunto de alumnos a partir de un archivo CSV con el formato especificado.
-
-    :param nombre_archivo: el nombre del archivo CSV a procesar.
-    :return: None
+    Calcula la nota final a partir de las notas de los controles y el examen.
+    Si el estudiante ha suspendido el examen final, devuelve la nota del examen.
+    Si el estudiante ha aprobado el examen final, devuelve una media ponderada en la que los controles valen un 10% cada uno y el examen final un 80% de la nota.
     """
-    with open(nombre_archivo, newline='', encoding='utf-8') as archivo:
-        lector_csv = csv.reader(archivo)
-        # Saltar la primera línea (encabezados)
-        #next(lector_csv)
-        for linea in lector_csv:
-            nombre = linea[0]
-            apellidos = linea[1]
-            control1 = float(linea[2])
-            control2 = float(linea[3])
-            examen_final = float(linea[4])
+    if examen < 5:
+        return examen
+    else:
+        nota_final = 0.1 * (control1 + control2) + 0.8 * examen
+        return round(nota_final, 2)
 
-            # Calcular la nota final
-            nota_final = 0
-            if examen_final >= 5:
-                nota_final = 0.1 * control1 + 0.1 * control2 + 0.8 * examen_final
-            else:
-                nota_final = examen_final
 
-            # Determinar si el alumno aprobó o no
-            aprobado = False
+def extrae_datos(linea):
+    """
+    Extrae el nombre, apellidos y notas del alumno a partir de una línea del fichero.
+    Devuelve los valores como una tupla.
+    """
+    campos = linea.strip().split(",")
+    nombre = campos[0]
+    apellidos = campos[1]
+    control1 = float(campos[2])
+    control2 = float(campos[3])
+    examen = float(campos[4])
+    return nombre, apellidos, control1, control2, examen
+
+
+def calcula_notas_finales(nombre_fichero):
+    """
+    Lee el fichero con las notas de los alumnos y calcula sus notas finales.
+    Imprime una línea por cada alumno con su nota final y si ha aprobado o no la asignatura.
+    """
+    with open(nombre_fichero, "r", encoding="utf-8") as fichero:
+        for linea in fichero:
+            nombre, apellidos, control1, control2, examen = extrae_datos(linea)
+            nota_final = calcula_nota_final(control1, control2, examen)
             if nota_final >= 5:
-                aprobado = True
+                print(nombre, apellidos, round(nota_final, 2), "aprobado")
+            else:
+                print(nombre, apellidos, round(nota_final, 2), "suspenso")
 
-            # Imprimir la información del alumno
-            print(nombre, apellidos, round(nota_final, 2), 'aprobado' if aprobado else 'suspenso')
-
-# Ejemplo de uso
 calcula_notas_finales('notas.csv')
