@@ -10,7 +10,7 @@ def calcula_notas_finales(nombre_archivo):
     with open(nombre_archivo, newline='', encoding='utf-8') as archivo:
         lector_csv = csv.reader(archivo)
         # Saltar la primera línea (encabezados)
-        next(lector_csv)
+        #next(lector_csv)
         for linea in lector_csv:
             nombre = linea[0]
             apellidos = linea[1]
@@ -31,7 +31,7 @@ def calcula_notas_finales(nombre_archivo):
                 aprobado = True
 
             # Imprimir la información del alumno
-            print(nombre, apellidos, round(nota_final, 2), 'APROBADO' if aprobado else 'SUSPENSO')
+            print(nombre, apellidos, round(nota_final, 2), 'aprobado' if aprobado else 'suspenso')
 
 # Ejemplo de uso
 calcula_notas_finales('notas.csv')

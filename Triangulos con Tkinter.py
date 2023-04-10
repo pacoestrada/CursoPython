@@ -1,16 +1,27 @@
 import tkinter as tk
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/master
 def tipo_triangulo():
     try:
         a = float(entry_a.get())
         b = float(entry_b.get())
         c = float(entry_c.get())
+<<<<<<< HEAD
 
         if a + b > c and a + c > b and b + c > a:
             if a == b == c:
                 resultado.config(text="Es un triángulo equilátero", fg="green")
             elif a == b or a == c or b == c:
+=======
+        
+        if a+b>c and a+c>b and b+c>a:
+            if a==b==c:
+                resultado.config(text="Es un triángulo equilátero", fg="green")
+            elif a==b or a==c or b==c:
+>>>>>>> origin/master
                 resultado.config(text="Es un triángulo isósceles", fg="green")
             else:
                 resultado.config(text="Es un triángulo escaleno", fg="green")
@@ -18,7 +29,11 @@ def tipo_triangulo():
             resultado.config(text="No se puede formar un triángulo", fg="red")
     except ValueError:
         resultado.config(text="Los valores introducidos no son numéricos", fg="red")
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> origin/master
 
 # Crear ventana
 ventana = tk.Tk()
@@ -34,8 +49,12 @@ frame_resultado = tk.Frame(ventana, bg="lightblue")
 frame_resultado.pack(pady=20)
 
 # Crear widgets en frame_info
+<<<<<<< HEAD
 tk.Label(frame_info,
          text="Este programa calcula el tipo de triángulo que se forma\na partir de las medidas de sus lados.",
+=======
+tk.Label(frame_info, text="Este programa calcula el tipo de triángulo que se forma\na partir de las medidas de sus lados.", 
+>>>>>>> origin/master
          bg="lightblue", font=("Arial", 20)).pack()
 
 # Crear widgets en frame_inputs
@@ -56,6 +75,12 @@ resultado = tk.Label(frame_resultado, bg="lightblue", font=("Arial", 20))
 resultado.pack()
 
 # Crear botón para calcular
+<<<<<<< HEAD
 tk.Button(ventana, text="Calcular", bg="lightblue", font=("Arial", 16), command=tipo_triangulo).pack(pady=20)
 
 ventana.mainloop()
+=======
+tk.Button(ventana, text="Calcular", bg="lightblue", font=("Arial", 20), command=tipo_triangulo).pack(pady=20)
+
+ventana.mainloop()
+>>>>>>> origin/master
