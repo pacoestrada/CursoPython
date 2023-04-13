@@ -15,7 +15,7 @@ def tipo_triangulo(a, b, c):
             print("Escaleno")
     else:
         print("No es un triángulo")
-
+#llamamos a la función "tipo_triangulo" con diferentes valores para los parámetros a, b y c.
 tipo_triangulo(1, 1, 1)
 tipo_triangulo(1, 3, 3)
 tipo_triangulo(2, 4, 5)
