@@ -1,7 +1,8 @@
 def tipo_triangulo(a, b, c):
     """
-    Definimos una función que recibe las longitudes de 3 segmentos y comprueba si se pueden formar un triángulo. Si se puede, la función
-    determina si el triángulo es equilátero , isósceles  o escaleno y delvuelve el resultado
+    Definimos una función que recibe las longitudes de 3 segmentos y comprueba si se pueden formar un triángulo.
+    Si se puede, la función determina si el triángulo es equilátero , isósceles  o escaleno y delvuelve el resultado
+    De lo contrario nos informa de que no se puede formar un triángulo.
 
     :parámetro a: Longitud del primer segmento.
     :tipo a: float
@@ -10,7 +11,7 @@ def tipo_triangulo(a, b, c):
     :parámetro c: Longitud del tercer segmento.
     :tipo c: float
     :return: Una cadena de texto que indica el tipo de triángulo que se puede formar con los segmentos dados
-    como parámetros o si no se puede formar un triángulo
+    como parámetros o si no se puede formar un triángulo, o sea no es un triángulo.
     :tipo del return: str
     """
     if a + b > c and a + c > b and b + c > a:
