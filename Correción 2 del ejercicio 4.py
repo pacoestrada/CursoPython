@@ -1,7 +1,7 @@
 def tipo_triangulo(a, b, c):
     """
     Creamos una función tipo_triangulo que recibe las longitudes de 3 segmentos
-    e imprima un mensaje por consola indicando si con esos segmentos se puede o no formar un triángulo.
+    e imprime un mensaje por consola indicando si con esos segmentos se puede o no formar un triángulo.
     En caso de que sí se pueda, la función indica si forman un triángulo equilátero (3 lados iguales),
     isósceles (2 lados iguales y 1 diferente) o escaleno (3 lados distintos).
 
