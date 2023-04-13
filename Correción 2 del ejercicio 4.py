@@ -12,13 +12,13 @@ def tipo_triangulo(a, b, c):
     """
     if a + b > c and a + c > b and b + c > a:
         if a == b == c:
-            print("El triángulo es equilátero")
+            print("Equilátero")
         elif a == b or b == c or a == c:
-            print("El triángulo es isósceles")
+            print("Isósceles")
         else:
-            print("El triángulo es escaleno")
+            print("Escaleno")
     else:
-        print("No se puede formar un triángulo")
+        print("No es un triángulo")
 
 tipo_triangulo(1, 1, 1)
 tipo_triangulo(1, 3, 3)
