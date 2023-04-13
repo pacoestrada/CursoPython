@@ -5,7 +5,7 @@ with open('tiempo.json') as f:
     data = json.load(f)
 
 # imprimir la cabecera de la tabla
-print('{:<10} {:<15} {:<15} {:<15} {:<15}'.format('Fecha', 'Máx Temp', 'Mín Temp', 'Viento', 'Humedad'))
+print('{:<15} {:<15} {:<15} {:<15} {:<15} {:<15}'.format('Fecha', 'Máx Temp', 'Mín Temp', 'Viento', 'Humedad', 'Descripción'))
 
 # iterar sobre los 7 días y mostrar la información en la tabla
 for i in range(1, 8):
@@ -15,6 +15,7 @@ for i in range(1, 8):
     min_temp = day['temperature_min']
     wind = day['wind']
     humidity = day['humidity']
-    print('{:<10} {:<15} {:<15} {:<15} {:<15}'.format(date, max_temp, min_temp, wind, humidity))
+    text = day['text']
+    print('{:<15} {:<15} {:<15} {:<15} {:<15} {:<15}'.format(date, max_temp, min_temp, wind, humidity, text))
 
 
