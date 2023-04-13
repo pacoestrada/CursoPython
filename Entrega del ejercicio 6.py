@@ -1,20 +1,20 @@
 import json
 
-# leer el archivo json
-with open('tiempo.json', 'r') as f:
-    tiempo = json.load(f)
+# leer el contenido del archivo tiempo.json
+with open('tiempo.json') as f:
+    data = json.load(f)
 
-# obtener la información necesaria para cada día
-datos = []
+# imprimir la cabecera de la tabla
+print('{:<10} {:<15} {:<15} {:<15} {:<15}'.format('Fecha', 'Máx Temp', 'Mín Temp', 'Viento', 'Humedad'))
+
+# iterar sobre los 7 días y mostrar la información en la tabla
 for i in range(1, 8):
-    dia = tiempo[f'day{i}']
-    fecha = dia['date']
-    max_temp = dia['temperature_max']
-    min_temp = dia['temperature_min']
-    texto = dia['text']
-    datos.append((fecha, max_temp, min_temp, texto))
+    day = data[f'day{i}']
+    date = day['date']
+    max_temp = day['temperature_max']
+    min_temp = day['temperature_min']
+    wind = day['wind']
+    humidity = day['humidity']
+    print('{:<10} {:<15} {:<15} {:<15} {:<15}'.format(date, max_temp, min_temp, wind, humidity))
 
-# mostrar la tabla
-print('Fecha      Máx.  Mín.  Descripción')
-for fecha, max_temp, min_temp, texto in datos:
-    print(f'{fecha}  {max_temp:>4}ºC  {min_temp:>4}ºC  {texto}')
+
