@@ -41,4 +41,6 @@ def calcula_notas_finales(nombre_fichero):
                 print(nombre, apellidos, nota_final, "suspenso")
 
 #llamamaos a la función sobre el archivo 'notas.csv' que hemos descargado en el ejercicio
+
+
 calcula_notas_finales('notas.csv')
