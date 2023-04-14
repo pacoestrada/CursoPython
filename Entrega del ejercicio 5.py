@@ -2,7 +2,8 @@ def calcula_nota_final(control1, control2, examen):
     """
     Calcula la nota final a partir de las notas de los controles y el examen.
     Si el estudiante ha suspendido el examen final, devuelve la nota del examen.
-    Si el estudiante ha aprobado el examen final, devuelve una media ponderada en la que los controles valen un 10% cada uno y el examen final un 80% de la nota.
+    Si el estudiante ha aprobado el examen final, devuelve una media ponderada
+    en la que los controles valen un 10% cada uno y el examen final un 80% de la nota.
     """
     if examen < 5:
         return examen
@@ -38,5 +39,6 @@ def calcula_notas_finales(nombre_fichero):
                 print(nombre, apellidos, nota_final, "aprobado")
             else:
                 print(nombre, apellidos, nota_final, "suspenso")
+
 #llamamaos a la función sobre el archivo 'notas.csv' que hemos descargado en el ejercicio
 calcula_notas_finales('notas.csv')
