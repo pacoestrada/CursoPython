@@ -35,8 +35,8 @@ def calcula_notas_finales(nombre_fichero):
             nombre, apellidos, control1, control2, examen = extrae_datos(linea)
             nota_final = calcula_nota_final(control1, control2, examen)
             if nota_final >= 5:
-                print(nombre, apellidos, round(nota_final, 2), "aprobado")
+                print(nombre, apellidos, nota_final, "aprobado")
             else:
-                print(nombre, apellidos, round(nota_final, 2), "suspenso")
+                print(nombre, apellidos, nota_final, "suspenso")
 #llamamaos a la función sobre el archivo 'notas.csv' que hemos descargado en el ejercicio
 calcula_notas_finales('notas.csv')
