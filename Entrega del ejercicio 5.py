@@ -9,7 +9,7 @@ def calcula_nota_final(control1, control2, examen):
         return examen
     else:
         nota_final = 0.1 * (control1 + control2) + 0.8 * examen
-        return round(nota_final, 2)
+        return round (nota_final, 2) #redondeamos para que saque la nota final con 2 decimales.
 
 
 def extrae_datos(linea):
