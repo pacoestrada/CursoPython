@@ -23,6 +23,7 @@ for i in range(1, 8):
     wind = day['wind']
     humidity = day['humidity']
     text = day['text']
+#Imprimimos los datos formateando el texto con alineación a la izquierda la fecha y resto a la derecha. Damos más espacio a Descripción.
     print(f'{date:<15} | {min_temp:>15} | {max_temp:>15} | {humidity:>15} | {wind:>15} | {text:>30}')
 
 
