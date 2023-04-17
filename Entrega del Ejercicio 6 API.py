@@ -12,7 +12,8 @@ data = json.loads(respuesta.read().decode('utf-8'))
 
 
 # Imprimimos la cabecera de la tabla
-print(f'{"FECHA":<15} | {"TEMP MIN":<15} | {"TEMP MAX":<15} | {"HUMEDAD":<15} | {"VIENTO":<15} |{"DESCRIPCIÓN":<15}')
+#print(f'{"FECHA":<15} | {"TEMP MIN":<15} | {"TEMP MAX":<15} | {"HUMEDAD":<15} | {"VIENTO":<15} |{"DESCRIPCIÓN":<15}')
+print(f'{"FECHA":<15} | {"TEMP MIN":>15} | {"TEMP MAX":>15} | {"HUMEDAD":>15} | {"VIENTO":>15} | {"DESCRIPCIÓN":>15}')
 print("----------------------------------------------------------------------------------------------------------------")
 
 # Iteramos sobre los 7 días y mostramos la información en la tabla
@@ -25,3 +26,4 @@ for i in range(1, 8):
     humidity = day['humidity']
     text = day['text']
     print(f'{date:<15} | {min_temp:<15} | {max_temp:<15} | {humidity:<15} | {wind:<15} | {text:<16}')
+
