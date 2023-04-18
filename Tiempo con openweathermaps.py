@@ -3,7 +3,7 @@ from tkinter import messagebox
 import requests
 from datetime import datetime, timedelta
 
-API_KEY = "6d688701673d5641be24c1d760ff2250"
+API_KEY = "API-KEY"#reemplazar aquí la llave del API
 
 def obtener_pronostico(codigo_postal):
     url = f"http://api.openweathermap.org/data/2.5/forecast?zip={codigo_postal}&appid={API_KEY}&units=metric"
