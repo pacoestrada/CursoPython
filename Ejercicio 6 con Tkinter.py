@@ -8,7 +8,7 @@ url = "https://api.tutiempo.net/json/?lan=es&apid=zwDX4azaz4X4Xqs&ll=40.4178,-3.
 # Envíamos una solicitud HTTP GET a la URL del ejercicio 6 y guardamos la respuesta en la variable 'respuesta'
 respuesta = urllib.request.urlopen(url)
 
-""" Leemos el contenido de 'respuesta' y lo decodificamos (usando 'utf-8')
+""" Leeremos el contenido de 'respuesta' y lo decodificamos (usando 'utf-8')
  y luego lo convertimos en un diccionario de Python usando json.loads() """
 data = json.loads(respuesta.read().decode('utf-8'))
 
