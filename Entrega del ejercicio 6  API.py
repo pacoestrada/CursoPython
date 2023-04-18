@@ -17,7 +17,7 @@ print("-------------------------------------------------------------------------
 
 # Iterar sobre los 7 días y mostrar la información en la tabla
 for i in range(1, 8):
-    day = data[f'day{i}'] # Accedemos al diccionario asociado al día específico utilizando el valor de 'i', y asignarlo a la variable 'day'
+    day = data[f'day{i}'] # Accedemos al diccionario asociado con el día específico utilizando el valor de 'i', y asignnamos a la variable 'day'
     date = day['date']
     max_temp = day['temperature_max']
     min_temp = day['temperature_min']
