@@ -40,7 +40,7 @@ def mostrar_pronostico():
         messagebox.showerror("Error", str(e))
 
 
-root = tk.Tk()
+root = tk.Tk() 
 root.title("Consulta del tiempo")
 
 frame = tk.Frame(root, padx=10, pady=10)
@@ -52,7 +52,7 @@ label.grid(row=0, column=0, padx=(0, 5), pady=(0, 5))
 entry = tk.Entry(frame)
 entry.grid(row=0, column=1, pady=(0, 5))
 
-button = tk.Button(frame, text="Consultar", command=mostrar_pronostico)
+button = tk.Button(frame, text="Consultar", command=mostrar_pronostico) 
 button.grid(row=1, columnspan=2, pady=(0, 5))
 
 root.mainloop()
